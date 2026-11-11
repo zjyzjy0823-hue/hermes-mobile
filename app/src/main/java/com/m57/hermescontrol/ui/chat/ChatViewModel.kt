@@ -6401,7 +6401,7 @@ class ChatViewModel(
                     message.role == MessageRole.USER && message.attachments.isNullOrEmpty() -> {
                         message.copy(
                             attachments =
-                                userImageAttachments(
+                                userAttachments(
                                     message.content,
                                     ::gatewayMediaUrl,
                                 ).takeIf { it.isNotEmpty() },

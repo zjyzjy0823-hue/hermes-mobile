@@ -119,7 +119,11 @@ fun UserBubble(
             remember(message.content, message.attachments) {
                 // #1432: the path is only hidden when its image renders as an attachment below.
                 val visible =
-                    if (message.attachments.isNullOrEmpty()) message.content else hideImageRefLines(message.content)
+                    if (message.attachments.isNullOrEmpty()) {
+                        message.content
+                    } else {
+                        hideUserAttachmentRefLines(message.content)
+                    }
                 ToolJson.clampForDisplay(visible)
             }
         val highlightedText =

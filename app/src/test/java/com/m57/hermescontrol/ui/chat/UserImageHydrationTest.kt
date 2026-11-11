@@ -487,4 +487,48 @@ class UserImageHydrationTest {
         assertEquals("caption\nmore text @image:/inline.png", hideImageRefLines(content))
         assertEquals("plain", hideImageRefLines("plain"))
     }
+
+    @Test
+    fun userFileAttachments_restoresAbsoluteAndQuotedPathsButIgnoresRelativeRefs() {
+        val content =
+            """
+            @file:/Users/zjy/.hermes/attachments/report.pdf
+            @file:"/Users/zjy/.hermes/attachments/my notes.txt"
+            @file:files/relative-note.txt
+            Please inspect these
+            """.trimIndent()
+
+        val attachments =
+            userFileAttachments(content) { path -> "https://gateway.local/api/files/download?path=$path" }
+
+        assertEquals(2, attachments.size)
+        assertEquals("report.pdf", attachments[0].name)
+        assertEquals("application/pdf", attachments[0].mimeType)
+        assertEquals(AttachmentSource.GATEWAY, attachments[0].source)
+        assertEquals("my notes.txt", attachments[1].name)
+
+        val visible = hideUserAttachmentRefLines(content)
+        assertEquals("@file:files/relative-note.txt\nPlease inspect these", visible)
+    }
+
+    @Test
+    fun mapServerMessages_restoresAbsoluteFileAttachmentsOnReload() {
+        val content = "@file:/Users/zjy/.hermes/attachments/build.apk\n\nInstall check"
+        val userRow = SessionMessage(id = 21, role = "user", content = JsonPrimitive(content))
+        val mapped =
+            mapServerMessages(
+                sessionId = "session-1",
+                messages = listOf(userRow),
+                offset = 0,
+                latestPaging = true,
+                liveMessages = emptyList(),
+                mediaUrl = { path -> "https://gw.internal/api/files/download?path=$path" },
+            ).single()
+
+        val att = mapped.attachments?.single()
+        assertNotNull(att)
+        assertEquals("build.apk", att!!.name)
+        assertEquals("https://gw.internal/api/files/download?path=/Users/zjy/.hermes/attachments/build.apk", att.uri)
+        assertEquals(AttachmentSource.GATEWAY, att.source)
+    }
 }

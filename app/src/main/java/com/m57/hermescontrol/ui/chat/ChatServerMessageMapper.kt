@@ -233,7 +233,7 @@ internal fun mapServerMessages(
         var attachments: List<Attachment>? = null
         var persistedContent: String? = null
         if (role == MessageRole.USER) {
-            attachments = userImageAttachments(finalContent, mediaUrl).takeIf { it.isNotEmpty() }
+            attachments = userAttachments(finalContent, mediaUrl).takeIf { it.isNotEmpty() }
         } else if (role == MessageRole.ASSISTANT && rawContent.contains("MEDIA:")) {
             val items = HostMediaExtractor.extract(rawContent)
             if (items.isNotEmpty()) {

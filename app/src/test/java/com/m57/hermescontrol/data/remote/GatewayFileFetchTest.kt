@@ -348,4 +348,40 @@ class GatewayFileFetchTest {
             assertTrue("Pre-existing cache file must be preserved", initialFile.exists())
             assertEquals(existingCacheContent, initialFile.readText())
         }
+
+    @Test
+    fun fetchSendsBearerAuthorizationHeaderInTokenMode() =
+        runOnMain {
+            every { AuthManager.isGatedMode() } returns false
+            mockServer.enqueue(
+                MockResponse()
+                    .setResponseCode(200)
+                    .setHeader("Content-Type", "image/jpeg")
+                    .setBody("jpeg-bytes"),
+            )
+
+            val result = GatewayFileClient.fetch("/tmp/photo.jpg", cacheDir)
+
+            assertTrue("Expected Success, got $result", result is GatewayFileResult.Success)
+            val recorded = mockServer.takeRequest(2, TimeUnit.SECONDS)!!
+            assertEquals("Bearer test-token", recorded.getHeader("Authorization"))
+        }
+
+    @Test
+    fun fetchOmitsBearerAuthorizationHeaderInGatedCookieMode() =
+        runOnMain {
+            every { AuthManager.isGatedMode() } returns true
+            mockServer.enqueue(
+                MockResponse()
+                    .setResponseCode(200)
+                    .setHeader("Content-Type", "application/pdf")
+                    .setBody("pdf-bytes"),
+            )
+
+            val result = GatewayFileClient.fetch("/tmp/doc.pdf", cacheDir)
+
+            assertTrue("Expected Success, got $result", result is GatewayFileResult.Success)
+            val recorded = mockServer.takeRequest(2, TimeUnit.SECONDS)!!
+            assertEquals(null, recorded.getHeader("Authorization"))
+        }
 }

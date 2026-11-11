@@ -23,17 +23,35 @@ internal fun reconcileUserImages(
     confirmedContent: String,
 ): ReconciledImages {
     val localList = local.orEmpty()
-    val confirmedImages = confirmed.orEmpty().filter { it.isImage && it.isGateway }
-    if (confirmedImages.isEmpty()) {
+    val confirmedList = confirmed.orEmpty()
+    val confirmedImages = confirmedList.filter { it.isImage && it.isGateway }
+    val confirmedFiles = confirmedList.filter { !it.isImage && it.isGateway }
+    val replaceImages =
+        confirmedImages.isNotEmpty() && confirmedImages.size >= localList.count { it.isImage }
+    val replaceFiles =
+        confirmedFiles.isNotEmpty() && confirmedFiles.size >= localList.count { !it.isImage }
+    if (!replaceImages && !replaceFiles) {
         return ReconciledImages(localList.takeIf { it.isNotEmpty() } ?: confirmed, localContent)
     }
-    // A partial confirmed set never drops a local image.
-    if (confirmedImages.size < localList.count { it.isImage }) return ReconciledImages(local, localContent)
-    val knownRefs = imageRefLines(localContent).toSet()
-    val missing = imageRefLines(confirmedContent).filterNot { it in knownRefs }
-    val content = if (missing.isEmpty()) localContent else localContent.trimEnd() + "\n" + missing.joinToString("\n")
-    // No local attachments at all: a caption-only alias adopts the confirmed set (all kinds) and its refs.
-    val attachments = if (localList.isEmpty()) confirmed else confirmedImages + localList.filterNot { it.isImage }
+    val missingRefs = mutableListOf<String>()
+    if (replaceImages) {
+        val knownImageRefs = imageRefLines(localContent).toSet()
+        missingRefs += imageRefLines(confirmedContent).filterNot { it in knownImageRefs }
+    }
+    if (replaceFiles) {
+        val knownFileRefs = fileRefLines(localContent).toSet()
+        missingRefs += fileRefLines(confirmedContent).filterNot { it in knownFileRefs }
+    }
+    val content =
+        if (missingRefs.isEmpty()) localContent else localContent.trimEnd() + "\n" + missingRefs.joinToString("\n")
+    val attachments =
+        if (localList.isEmpty()) {
+            confirmedList.takeIf { it.isNotEmpty() }
+        } else {
+            val resolvedImages = if (replaceImages) confirmedImages else localList.filter { it.isImage }
+            val resolvedFiles = if (replaceFiles) confirmedFiles else localList.filterNot { it.isImage }
+            (resolvedImages + resolvedFiles).takeIf { it.isNotEmpty() }
+        }
     return ReconciledImages(attachments, content)
 }
 
@@ -45,4 +63,24 @@ private fun imageRefLines(content: String): List<String> =
             .lines()
             .map { it.trim() }
             .filter { it.startsWith("@image:") && it.removePrefix("@image:").trim().startsWith("/") }
+    }
+
+private fun fileRefLines(content: String): List<String> =
+    if (!content.contains("@file:")) {
+        emptyList()
+    } else {
+        content
+            .lines()
+            .map { it.trim() }
+            .filter { line ->
+                line.startsWith("@file:") &&
+                    line
+                        .removePrefix("@file:")
+                        .trim()
+                        .removeSurrounding("\"")
+                        .removeSurrounding("'")
+                        .removeSurrounding("`")
+                        .trim()
+                        .startsWith("/")
+            }
     }

@@ -218,7 +218,16 @@ object GatewayFileClient {
 
             val call =
                 try {
-                    OkHttpProvider.base.newCall(Request.Builder().url(url).build())
+                    val request =
+                        Request
+                            .Builder()
+                            .url(url)
+                            .apply {
+                                if (token.isNotBlank() && !AuthManager.isGatedMode()) {
+                                    header("Authorization", "Bearer $token")
+                                }
+                            }.build()
+                    OkHttpProvider.base.newCall(request)
                 } catch (e: CancellationException) {
                     throw e
                 } catch (e: Throwable) {
