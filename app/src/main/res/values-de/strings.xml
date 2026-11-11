@@ -374,8 +374,8 @@
     <string name="settings_about_update_retry">Erneut versuchen</string>
     <string name="settings_about_rc_updates_title">Nach Release-Candidate-Updates suchen</string>
     <string name="settings_about_rc_updates_desc">Pre-Release-RC-Builds installieren. Sie können weniger stabil sein.</string>
-    <string name="settings_support_title">Hermes Mobile unterstützen</string>
-    <string name="settings_support_message">Wenn dir Hermes Mobile Zeit spart, kannst du die Entwicklung gerne unterstützen.</string>
+    <string name="settings_support_title">Hermes unterstützen</string>
+    <string name="settings_support_message">Wenn dir Hermes Zeit spart, kannst du die Entwicklung gerne unterstützen.</string>
     <string name="settings_support_action">Unterstütze mich auf Ko-fi</string>
 
     <!-- Settings list summaries (drill-down) -->
@@ -1459,7 +1459,7 @@
     <string name="auth_login_error_unreachable">Dashboard nicht erreichbar — prüfe IP und Port</string>
     <string name="auth_login_action_browser">Mit %1$s anmelden</string>
     <string name="auth_login_browser_desc">Dieses Dashboard meldet sich mit %1$s an. Für die Anmeldung öffnet sich ein Browser-Tab, danach geht es hier weiter.</string>
-    <string name="auth_login_browser_waiting">Schließe die Anmeldung im Browser ab und kehre dann zu Hermes Mobile zurück…</string>
+    <string name="auth_login_browser_waiting">Schließe die Anmeldung im Browser ab und kehre dann zu Hermes zurück…</string>
     <string name="auth_login_error_browser_unsupported">Dieses Dashboard ist zu alt für die Browser-Anmeldung. Aktualisiere Hermes Agent auf dem Server.</string>
     <string name="auth_login_error_browser_no_browser">Kein Browser zum Öffnen der Anmeldeseite verfügbar.</string>
     <string name="auth_login_error_browser_denied">Die Anmeldung wurde nicht abgeschlossen (%1$s).</string>

@@ -225,8 +225,8 @@
 <string name="settings_sec_about">حول التطبيق</string>
 <string name="settings_sec_language">اللغة</string>
 <string name="settings_about_app_name">Hermes</string>
-<string name="settings_support_title">ادعم Hermes Mobile</string>
-<string name="settings_support_message">إذا وفّر لك Hermes Mobile الوقت، يمكنك دعم تطويره.</string>
+<string name="settings_support_title">ادعم Hermes</string>
+<string name="settings_support_message">إذا وفّر لك Hermes الوقت، يمكنك دعم تطويره.</string>
 <string name="settings_support_action">ادعمني على Ko-fi</string>
 <string name="settings_about_version">الإصدار</string>
 <string name="settings_about_build">رقم البنية</string>
@@ -1224,7 +1224,7 @@
 <string name="action_done">تم</string>
 <string name="action_close">إغلاق</string>
     <string name="action_remove">إزالة</string>
-<string name="update_notice_banner_text">يتوفر إصدار جديد من Hermes Mobile %1$s</string>
+<string name="update_notice_banner_text">يتوفر إصدار جديد من Hermes %1$s</string>
 <string name="update_notice_banner_action">تحديث</string>
 <string name="update_dialog_title">التحديث إلى %1$s</string>
 <string name="update_dialog_changelog_header">ما الجديد</string>

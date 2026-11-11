@@ -156,14 +156,14 @@ jobs:
           set -euo pipefail
           BUILD_TOOLS=$(find "$ANDROID_HOME/build-tools" -mindepth 1 -maxdepth 1 -type d | sort -V | tail -n 1)
           mkdir -p release
-          cp app/build/outputs/apk/release/app-release.apk "release/hermes-mobile-$TAG.apk"
+          cp app/build/outputs/apk/release/app-release.apk "release/hermes-$TAG.apk"
           python3 .github/scripts/verify_release_apk.py \
-            --apk "release/hermes-mobile-$TAG.apk" \
+            --apk "release/hermes-$TAG.apk" \
             --certificate "$RELEASE_CERTIFICATE_SHA256" \
             --version-name "$VERSION" --version-code "$CODE" \
             --apksigner "$BUILD_TOOLS/apksigner" --aapt "$BUILD_TOOLS/aapt"
           printf 'versionName=%s\nversionCode=%s\n' "$VERSION" "$CODE" > release/version.txt
-          (cd release && sha256sum "hermes-mobile-$TAG.apk" version.txt > SHA256SUMS)
+          (cd release && sha256sum "hermes-$TAG.apk" version.txt > SHA256SUMS)
 
       - name: Transfer verified release files
         uses: actions/upload-artifact@v7
@@ -230,10 +230,10 @@ jobs:
           gh release create "$TAG" --draft \
             --verify-tag --target "$SOURCE_SHA" --title "$TAG" --generate-notes \
             "${FLAGS[@]}" \
-            "release/hermes-mobile-$TAG.apk" release/version.txt release/SHA256SUMS
+            "release/hermes-$TAG.apk" release/version.txt release/SHA256SUMS
           mkdir downloaded
           gh release download "$TAG" --dir downloaded \
-            --pattern "hermes-mobile-$TAG.apk" --pattern version.txt --pattern SHA256SUMS
+            --pattern "hermes-$TAG.apk" --pattern version.txt --pattern SHA256SUMS
           cmp release/SHA256SUMS downloaded/SHA256SUMS
           (cd downloaded && sha256sum --check --strict SHA256SUMS)
           gh release edit "$TAG" --draft=false

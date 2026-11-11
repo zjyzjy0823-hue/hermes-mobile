@@ -438,8 +438,8 @@
     <string name="settings_about_update_retry">Повторить</string>
     <string name="settings_about_rc_updates_title">Проверять предварительные версии (RC)</string>
     <string name="settings_about_rc_updates_desc">Устанавливать предварительные сборки RC. Они могут быть менее стабильными.</string>
-    <string name="settings_support_title">Поддержите Hermes Mobile</string>
-    <string name="settings_support_message">Если Hermes Mobile экономит вам время, вы можете поддержать его развитие.</string>
+    <string name="settings_support_title">Поддержите Hermes</string>
+    <string name="settings_support_message">Если Hermes экономит вам время, вы можете поддержать его развитие.</string>
     <string name="settings_support_action">Поддержать на Ko-fi</string>
 
     <!-- Settings list summaries (drill-down) -->
@@ -1545,7 +1545,7 @@
     <string name="auth_login_error_unreachable">Панель недоступна — проверьте IP-адрес и порт</string>
     <string name="auth_login_action_browser">Войти через %1$s</string>
     <string name="auth_login_browser_desc">Эта панель выполняет вход через %1$s. Для входа откроется вкладка браузера, после чего вы вернётесь сюда.</string>
-    <string name="auth_login_browser_waiting">Завершите вход в браузере и вернитесь в Hermes Mobile…</string>
+    <string name="auth_login_browser_waiting">Завершите вход в браузере и вернитесь в Hermes…</string>
     <string name="auth_login_error_browser_unsupported">Эта панель слишком старая для входа через браузер. Обновите Hermes Agent на сервере.</string>
     <string name="auth_login_error_browser_no_browser">Нет браузера, чтобы открыть страницу входа.</string>
     <string name="auth_login_error_browser_denied">Вход не завершён (%1$s).</string>
@@ -1584,7 +1584,7 @@
     <string name="action_remove">Удалить</string>
 
     <!-- Update notice banner (issue #890) -->
-    <string name="update_notice_banner_text">Доступна Hermes Mobile %1$s</string>
+    <string name="update_notice_banner_text">Доступна Hermes %1$s</string>
     <string name="update_notice_banner_action">Обновить</string>
     <string name="update_dialog_title">Обновление до %1$s</string>
     <string name="update_dialog_changelog_header">Что нового</string>

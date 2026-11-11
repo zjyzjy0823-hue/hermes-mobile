@@ -942,7 +942,7 @@ fun ChatScreen(
                                         scrollScope.launch { snackbarHostState.showSnackbar(copiedMessage) }
                                     },
                                     onShare = { details ->
-                                        val report = "Hermes Mobile ${BuildConfig.VERSION_NAME}\n\n$details"
+                                        val report = "Hermes ${BuildConfig.VERSION_NAME}\n\n$details"
                                         val intent =
                                             Intent(Intent.ACTION_SEND).apply {
                                                 type = "text/plain"

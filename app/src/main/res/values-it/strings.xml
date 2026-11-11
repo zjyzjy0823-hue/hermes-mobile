@@ -312,8 +312,8 @@
     <string name="settings_about_update_retry">Riprova</string>
     <string name="settings_about_rc_updates_title">Controlla aggiornamenti Release Candidate</string>
     <string name="settings_about_rc_updates_desc">Installa build di pre-rilascio RC. Potrebbero essere meno stabili.</string>
-    <string name="settings_support_title">Supporta Hermes Mobile</string>
-    <string name="settings_support_message">Se Hermes Mobile ti fa risparmiare tempo, puoi supportarne lo sviluppo.</string>
+    <string name="settings_support_title">Supporta Hermes</string>
+    <string name="settings_support_message">Se Hermes ti fa risparmiare tempo, puoi supportarne lo sviluppo.</string>
     <string name="settings_support_action">Supportami su Ko-fi</string>
     <string name="settings_summary_profiles">%1$d salvati</string>
     <string name="settings_summary_typing_on">Effetto digitazione attivo</string>
@@ -1317,7 +1317,7 @@
     <string name="action_done">Fine</string>
     <string name="action_close">Chiudi</string>
     <string name="action_remove">Rimuovi</string>
-    <string name="update_notice_banner_text">È disponibile Hermes Mobile %1$s</string>
+    <string name="update_notice_banner_text">È disponibile Hermes %1$s</string>
     <string name="update_notice_banner_action">Aggiorna</string>
     <string name="update_dialog_title">Aggiorna a %1$s</string>
     <string name="update_dialog_changelog_header">Novità</string>
@@ -1728,7 +1728,7 @@
     <!-- Missing strings and plurals for parity -->
     <string name="auth_login_action_browser">Accedi con %1$s</string>
     <string name="auth_login_browser_desc">Questo pannello esegue l\'accesso con %1$s. Si aprirà una scheda del browser per l\'accesso, quindi tornerai qui.</string>
-    <string name="auth_login_browser_waiting">Completa l\'accesso nel browser, quindi torna a Hermes Mobile…</string>
+    <string name="auth_login_browser_waiting">Completa l\'accesso nel browser, quindi torna a Hermes…</string>
     <string name="auth_login_error_browser_bad_response">Il pannello ha restituito una risposta di accesso imprevista.</string>
     <string name="auth_login_error_browser_denied">Accesso non completato (%1$s).</string>
     <string name="auth_login_error_browser_no_browser">Nessun browser disponibile per aprire la pagina di accesso.</string>

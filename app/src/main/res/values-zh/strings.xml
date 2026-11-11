@@ -225,8 +225,8 @@
     <string name="settings_sec_about">关于</string>
     <string name="settings_sec_language">语言</string>
     <string name="settings_about_app_name">Hermes</string>
-    <string name="settings_support_title">支持 Hermes Mobile</string>
-    <string name="settings_support_message">如果 Hermes Mobile 为你节省了时间，欢迎支持它的开发。</string>
+    <string name="settings_support_title">支持 Hermes</string>
+    <string name="settings_support_message">如果 Hermes 为你节省了时间，欢迎支持它的开发。</string>
     <string name="settings_support_action">在 Ko-fi 上支持我</string>
     <string name="settings_about_version">版本</string>
     <string name="settings_about_build">构建</string>
@@ -1195,7 +1195,7 @@
     <string name="action_done">完成</string>
     <string name="action_close">关闭</string>
     <string name="action_remove">移除</string>
-    <string name="update_notice_banner_text">Hermes Mobile %1$s 已可用</string>
+    <string name="update_notice_banner_text">Hermes %1$s 已可用</string>
     <string name="update_notice_banner_action">更新</string>
     <string name="processes_kill_title">结束进程？</string>
     <string name="processes_kill_desc">停止\"%1$s\"？此操作无法撤销。</string>
@@ -1760,7 +1760,7 @@
 <!-- Missing strings and plurals for parity -->
     <string name="auth_login_action_browser">使用 %1$s 登录</string>
     <string name="auth_login_browser_desc">此控制面板使用 %1$s 登录。将打开浏览器标签页进行登录，随后返回此处。</string>
-    <string name="auth_login_browser_waiting">请在浏览器中完成登录，然后返回 Hermes Mobile…</string>
+    <string name="auth_login_browser_waiting">请在浏览器中完成登录，然后返回 Hermes…</string>
     <string name="auth_login_error_browser_bad_response">控制面板返回了意外的登录响应。</string>
     <string name="auth_login_error_browser_denied">登录未完成（%1$s）。</string>
     <string name="auth_login_error_browser_no_browser">没有可用于打开登录页面的浏览器。</string>

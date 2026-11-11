@@ -335,8 +335,8 @@
     <string name="settings_about_update_retry">Reintentar</string>
     <string name="settings_about_rc_updates_title">Verificar las actualizaciones candidatas a la versión</string>
     <string name="settings_about_rc_updates_desc">Instalar versiones RC preliminares. Puede que sean menos estables.</string>
-    <string name="settings_support_title">Soporte Hermes Mobile</string>
-    <string name="settings_support_message">Si Hermes Mobile le ahorra tiempo, puede apoyar su desarrollo.</string>
+    <string name="settings_support_title">Soporte Hermes</string>
+    <string name="settings_support_message">Si Hermes le ahorra tiempo, puede apoyar su desarrollo.</string>
     <string name="settings_support_action">Apoyame en Ko-fi</string>
 
     <!-- Settings list summaries (drill-down) -->
@@ -1433,7 +1433,7 @@
     <string name="action_remove">Quitar</string>
 
     <!-- Update notice banner (issue #890) -->
-    <string name="update_notice_banner_text">Hermes Mobile%1$sestá disponible</string>
+    <string name="update_notice_banner_text">Hermes %1$s está disponible</string>
     <string name="update_notice_banner_action">Actualizar</string>
     <string name="update_dialog_title">Actualizar a%1$s</string>
     <string name="update_dialog_changelog_header">Novedades</string>
@@ -1863,7 +1863,7 @@
     <!-- Missing strings and plurals for parity -->
     <string name="auth_login_action_browser">Iniciar sesión con %1$s</string>
     <string name="auth_login_browser_desc">Este panel inicia sesión con %1$s. Se abrirá una pestaña del navegador para iniciar sesión y luego volverá aquí.</string>
-    <string name="auth_login_browser_waiting">Termina de iniciar sesión en el navegador y luego regresa a Hermes Mobile…</string>
+    <string name="auth_login_browser_waiting">Termina de iniciar sesión en el navegador y luego regresa a Hermes…</string>
     <string name="auth_login_error_browser_bad_response">El panel devolvió una respuesta de inicio de sesión inesperada.</string>
     <string name="auth_login_error_browser_denied">No se completó el inicio de sesión (%1$s).</string>
     <string name="auth_login_error_browser_no_browser">No hay ningún navegador disponible para abrir la página de inicio de sesión.</string>

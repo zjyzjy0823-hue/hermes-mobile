@@ -143,12 +143,12 @@ class LoopbackCallbackServer private constructor(
         val code = url.queryParameter("code")
         return when {
             !error.isNullOrBlank() -> {
-                respond(client, "200 OK", "Sign-in failed. You can close this tab and try again in Hermes Mobile.")
+                respond(client, "200 OK", "Sign-in failed. You can close this tab and try again in Hermes.")
                 NativeCallback.Denied(error)
             }
 
             !code.isNullOrBlank() -> {
-                respond(client, "200 OK", "Signed in. You can close this tab and return to Hermes Mobile.")
+                respond(client, "200 OK", "Signed in. You can close this tab and return to Hermes.")
                 NativeCallback.Code(code)
             }
 
@@ -167,7 +167,7 @@ class LoopbackCallbackServer private constructor(
         val body =
             "<!doctype html><html><head><meta charset=\"utf-8\">" +
                 "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">" +
-                "<title>Hermes Mobile</title></head>" +
+                "<title>Hermes</title></head>" +
                 "<body style=\"font-family:sans-serif;padding:2em\"><p>$message</p></body></html>"
         val bytes = body.toByteArray(Charsets.UTF_8)
         val head =
