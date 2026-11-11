@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Hermes Mobile</string>
+    <string name="app_name">Hermes</string>
     <string name="chat_send_desc">Invia</string>
     <string name="chat_mic_listening">In ascolto…</string>
     <string name="chat_voice_cancel">Annulla</string>
@@ -293,7 +293,7 @@
     <string name="settings_action_test_connection">Testa connessione</string>
     <string name="settings_sec_about">Info</string>
     <string name="settings_sec_language">Lingua</string>
-    <string name="settings_about_app_name">Hermes Mobile</string>
+    <string name="settings_about_app_name">Hermes</string>
     <string name="settings_about_version">Versione</string>
     <string name="settings_about_build">Build</string>
     <string name="settings_about_debug">Debug</string>
@@ -1294,7 +1294,7 @@
     <string name="auth_login_error_unreachable">Dashboard irraggiungibile — controlla IP e porta</string>
     <string name="auth_login_existing_profiles_title">Usa un profilo connesso esistente:</string>
     <string name="auth_login_use_profile">Entra come %1$s</string>
-    <string name="landing_title">Hermes Mobile</string>
+    <string name="landing_title">Hermes</string>
     <string name="landing_subtitle">Pannello di controllo per Hermes Agent</string>
     <string name="landing_action_auth_login">Accesso</string>
     <string name="auth_init_failed">Impossibile inizializzare le impostazioni dell\'app</string>

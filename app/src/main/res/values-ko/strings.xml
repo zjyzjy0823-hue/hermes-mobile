@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hermes Mobile</string>
+    <string name="app_name">Hermes</string>
 
     <!-- Chat -->
     <string name="chat_send_desc">전송</string>
@@ -228,7 +228,7 @@
     <string name="settings_chat_preview_agent">완료되었습니다! 여기에서 글꼴 크기를 조정할 수 있습니다.</string>
     <string name="settings_action_test_connection">연결 테스트</string>
     <string name="settings_sec_about">정보</string>
-    <string name="settings_about_app_name">헤르메스 모바일</string>
+    <string name="settings_about_app_name">Hermes</string>
     <string name="settings_support_title">Hermes Mobile 후원</string>
     <string name="settings_support_message">Hermes Mobile이 시간을 절약해 준다면 개발을 후원해 주세요.</string>
     <string name="settings_support_action">Ko-fi에서 후원하기</string>
@@ -1027,7 +1027,7 @@
     <string name="auth_login_use_profile">%1$s(으)로 접속</string>
 
     <!-- Landing Screen -->
-    <string name="landing_title">헤르메스 모바일</string>
+    <string name="landing_title">Hermes</string>
     <string name="landing_subtitle">Hermes Agent 제어판</string>
     <string name="landing_action_auth_login">인증 로그인</string>
 

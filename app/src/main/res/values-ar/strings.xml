@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-<string name="app_name">Hermes Mobile</string>
+<string name="app_name">Hermes</string>
 <string name="chat_send_desc">إرسال</string>
 <string name="chat_mic_listening">جارٍ الاستماع…</string>
 <string name="stt_permission_denied">يلزم الحصول على إذن الميكروفون للإدخال الصوتي</string>
@@ -224,7 +224,7 @@
 <string name="settings_action_test_connection">اختبار الاتصال</string>
 <string name="settings_sec_about">حول التطبيق</string>
 <string name="settings_sec_language">اللغة</string>
-<string name="settings_about_app_name">Hermes Mobile</string>
+<string name="settings_about_app_name">Hermes</string>
 <string name="settings_support_title">ادعم Hermes Mobile</string>
 <string name="settings_support_message">إذا وفّر لك Hermes Mobile الوقت، يمكنك دعم تطويره.</string>
 <string name="settings_support_action">ادعمني على Ko-fi</string>
@@ -1201,7 +1201,7 @@
 <string name="auth_login_error_unreachable">تعذر الوصول إلى لوحة التحكم — تحقق من عنوان IP والمنفذ</string>
 <string name="auth_login_existing_profiles_title">استخدام ملف تعريف مسجل دخوله مسبقاً:</string>
 <string name="auth_login_use_profile">الدخول باسم %1$s</string>
-<string name="landing_title">Hermes Mobile</string>
+<string name="landing_title">Hermes</string>
 <string name="landing_subtitle">لوحة التحكم لـ Hermes Agent</string>
 <string name="landing_action_auth_login">تسجيل الدخول والمصادقة</string>
 <string name="auth_init_failed">فشل في تهيئة إعدادات التطبيق</string>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Hermes Mobile</string>
+    <string name="app_name">Hermes</string>
 
     <!-- Chat -->
     <string name="chat_send_desc">Senden</string>
@@ -355,7 +355,7 @@
     <string name="settings_action_test_connection">Verbindung testen</string>
     <string name="settings_sec_about">Über</string>
     <string name="settings_sec_language">Sprache</string>
-    <string name="settings_about_app_name">Hermes Mobile</string>
+    <string name="settings_about_app_name">Hermes</string>
     <string name="settings_about_version">Version</string>
     <string name="settings_about_build">Build</string>
     <string name="settings_about_debug">Debug</string>
@@ -1469,7 +1469,7 @@
     <string name="auth_login_use_profile">Als %1$s fortfahren</string>
 
     <!-- Landing Screen -->
-    <string name="landing_title">Hermes Mobile</string>
+    <string name="landing_title">Hermes</string>
     <string name="landing_subtitle">Bedienfeld für Hermes Agent</string>
     <string name="landing_action_auth_login">Auth-Login</string>
 

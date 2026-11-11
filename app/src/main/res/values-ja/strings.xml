@@ -2,7 +2,7 @@
 <resources>
     <!-- タスク詳細 -->
 
-    <string name="app_name">Hermes Mobile</string>
+    <string name="app_name">Hermes</string>
 
     <!-- Chat -->
     <string name="chat_send_desc">送信</string>
@@ -354,7 +354,7 @@
     <string name="settings_action_test_connection">接続テスト</string>
     <string name="settings_sec_about">アプリ情報</string>
     <string name="settings_sec_language">言語</string>
-    <string name="settings_about_app_name">Hermes Mobile</string>
+    <string name="settings_about_app_name">Hermes</string>
     <string name="settings_about_version">バージョン</string>
     <string name="settings_about_build">ビルド</string>
     <string name="settings_about_debug">デバッグ</string>
@@ -1450,7 +1450,7 @@
     <string name="auth_login_use_profile">%1$sで接続</string>
 
     <!-- Landing Screen -->
-    <string name="landing_title">エルメスモバイル</string>
+    <string name="landing_title">Hermes</string>
     <string name="landing_subtitle">ヘルメスエージェントのコントロールパネル</string>
     <string name="landing_action_auth_login">ログイン</string>
 

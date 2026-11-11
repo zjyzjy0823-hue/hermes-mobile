@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hermes Mobile</string>
+    <string name="app_name">Hermes</string>
 
     <!-- Chat -->
     <string name="chat_send_desc">Enviar</string>
@@ -316,7 +316,7 @@
     <string name="settings_action_test_connection">Conexión de prueba</string>
     <string name="settings_sec_about">Acerca de</string>
     <string name="settings_sec_language">Idioma</string>
-    <string name="settings_about_app_name">Hermes Móvil</string>
+    <string name="settings_about_app_name">Hermes</string>
     <string name="settings_about_version">Versión</string>
     <string name="settings_about_build">Construir</string>
     <string name="settings_about_debug">Depurar</string>
@@ -1404,7 +1404,7 @@
     <string name="auth_login_use_profile">Ingresar como %1$s</string>
 
     <!-- Landing Screen -->
-    <string name="landing_title">Hermes Mobile</string>
+    <string name="landing_title">Hermes</string>
     <string name="landing_subtitle">Panel de control para el Agente Hermes</string>
     <string name="landing_action_auth_login">Inicio de sesión de autenticación</string>
 

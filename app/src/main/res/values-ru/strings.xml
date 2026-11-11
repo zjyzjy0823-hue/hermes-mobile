@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Hermes Mobile</string>
+    <string name="app_name">Hermes</string>
 
     <!-- Chat -->
     <string name="chat_send_desc">Отправить</string>
@@ -419,7 +419,7 @@
     <string name="settings_action_test_connection">Проверить подключение</string>
     <string name="settings_sec_about">О приложении</string>
     <string name="settings_sec_language">Язык</string>
-    <string name="settings_about_app_name">Hermes Mobile</string>
+    <string name="settings_about_app_name">Hermes</string>
     <string name="settings_about_version">Версия</string>
     <string name="settings_about_build">Сборка</string>
     <string name="settings_about_debug">Отладка</string>
@@ -1555,7 +1555,7 @@
     <string name="auth_login_use_profile">Войти как %1$s</string>
 
     <!-- Landing Screen -->
-    <string name="landing_title">Hermes Mobile</string>
+    <string name="landing_title">Hermes</string>
     <string name="landing_subtitle">Панель управления Hermes Agent</string>
     <string name="landing_action_auth_login">Вход</string>
 
